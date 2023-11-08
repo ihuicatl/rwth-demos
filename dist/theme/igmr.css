@@ -573,23 +573,29 @@ textarea {
   color: var(--col-accent-purple);
 }
 
-#demoTitle {
+#demoDiv {
   background: var(--col-foreground);
   color: var(--col-background);
-  /* color: #2890EC; */
   width: fit-content;
   min-width: 30vw;
-  /* height: 30vh; */
   text-align: center;
   display: flex;
+  flex-direction: column;
   align-items: center;
   padding: var(--side-margin);
   box-sizing: border-box;
-  font-size: 3em;
-  font-family: var(--r-heading-font-h2);
   margin: var(--side-margin);
   border-radius: var(--side-margin);
-  /* position: absolute; */
+}
+
+#demoTitle {
+  font-size: 3em;
+  font-family: var(--r-heading-font-h2);
+}
+
+#websiteLink {
+  font-size: 1em;
+  font-family: var(--r-main-font-size-code);
 }
 
 #vernieCol {
