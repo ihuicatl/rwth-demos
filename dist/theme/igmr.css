@@ -21,7 +21,7 @@
     --side-margin: min(5vh, 5vw);
 
 
-    --r-main-font: "Roboto", Source Sans Pro, Helvetica, sans-serif;
+    --r-main-font: "Fira Sans", "Roboto", Source Sans Pro, Helvetica, sans-serif;
     --r-main-font-size: min(3.5vh, 3.5vw);
     --r-main-font-small: min(1.5vh, 1.5vw);
     --r-main-font-size-code: min(2vh, 2vw);
@@ -574,18 +574,22 @@ textarea {
 }
 
 #demoTitle {
-  background: #131A2D;
+  background: var(--col-foreground);
   color: var(--col-background);
+  /* color: #2890EC; */
   width: fit-content;
   min-width: 30vw;
-  height: 100vh;
+  /* height: 30vh; */
   text-align: center;
   display: flex;
   align-items: center;
   padding: var(--side-margin);
   box-sizing: border-box;
-  font-size: 3.5em;
-  position: absolute;
+  font-size: 3em;
+  font-family: var(--r-heading-font-h2);
+  margin: var(--side-margin);
+  border-radius: var(--side-margin);
+  /* position: absolute; */
 }
 
 #vernieCol {

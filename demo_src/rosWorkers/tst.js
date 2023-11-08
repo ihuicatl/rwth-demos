@@ -4,7 +4,7 @@ function startVernieLED() {
     document.getElementById("vernieOutput").innerHTML += "Publisher initializing.\n";
 
     if (vernieLED === null) {
-        vernieLED = new Worker("./thesis_src/rosWorkers/rainbow.js");
+        vernieLED = new Worker("./demo_src/rosWorkers/rainbow.js");
     }
 
     vernieLED.onmessage = onMessageFromWorker;

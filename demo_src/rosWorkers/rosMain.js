@@ -37,8 +37,8 @@ let listener = null;
 let server = null;
 let client = null;
 let vernieLED = null;
-let rclPublisher = new Worker("./thesis_src/rosWorkers/rcl_publisher.js");
-let rclSubscriber = new Worker("./thesis_src/rosWorkers/rcl_subscriber.js");
+let rclPublisher = new Worker("./demo_src/rosWorkers/rcl_publisher.js");
+let rclSubscriber = new Worker("./demo_src/rosWorkers/rcl_subscriber.js");
 
 const publisherRoles = ["publisher", "service_server", "action_server"];
 const subscriberRoles = ["subscriber", "service_client", "action_client"];
@@ -175,7 +175,7 @@ function startTalker() {
     document.getElementById("talkerOutput").innerHTML += "Publisher initializing.\n";
 
     if (talker === null) {
-        talker = new Worker("./thesis_src/rosWorkers/talker.js");
+        talker = new Worker("./demo_src/rosWorkers/talker.js");
     }
 
     talker.onmessage = onMessageFromWorker;
@@ -203,7 +203,7 @@ function startListener() {
     document.getElementById("listenerOutput").innerHTML += "Subscriber initializing.\n";
 
     if (listener === null) {
-        listener = new Worker("./thesis_src/rosWorkers/listener.js");
+        listener = new Worker("./demo_src/rosWorkers/listener.js");
     }
 
     listener.onmessage = onMessageFromWorker;
@@ -229,7 +229,7 @@ function startServer() {
     document.getElementById("serverOutput").innerHTML += "Server initializing.\n";
 
     if (server === null) {
-        server = new Worker("./thesis_src/rosWorkers/server.js");
+        server = new Worker("./demo_src/rosWorkers/server.js");
     }
 
     server.onmessage = onMessageFromWorker;
@@ -257,7 +257,7 @@ function startClient() {
     document.getElementById("clientOutput").innerHTML += "Client initializing.\n";
 
     if (client === null) {
-        client = new Worker("./thesis_src/rosWorkers/client.js");
+        client = new Worker("./demo_src/rosWorkers/client.js");
     }
 
     client.onmessage = onMessageFromWorker;
@@ -304,7 +304,7 @@ function stopRCLPub() {
     }
     document.getElementById("rclpubOutput").innerHTML += "Publisher terminated.\n\n";
 
-    rclPublisher = new Worker("./thesis_src/rosWorkers/rcl_publisher.js");
+    rclPublisher = new Worker("./demo_src/rosWorkers/rcl_publisher.js");
 }
 
 function clearRCLPub() {
@@ -338,7 +338,7 @@ function stopRCLSub() {
     }
     document.getElementById("rclsubOutput").innerHTML += "Subscriber terminated.\n\n";
 
-    rclSubscriber = new Worker("./thesis_src/rosWorkers/rcl_subscriber.js");
+    rclSubscriber = new Worker("./demo_src/rosWorkers/rcl_subscriber.js");
 }
 
 function clearRCLSub() {
@@ -368,11 +368,11 @@ function refreshTopics() {
 // VERNIE
 
 function happyVernie() {
-    document.getElementById("vernie-head").setAttribute("src", "./thesis_src/images/vernie_happy.svg");
+    document.getElementById("vernie-head").setAttribute("src", "./demo_src/images/vernie_happy.svg");
 }
 
 function angryVernie() {
-    document.getElementById("vernie-head").setAttribute("src", "./thesis_src/images/vernie_angry.svg")
+    document.getElementById("vernie-head").setAttribute("src", "./demo_src/images/vernie_angry.svg")
 }
 
 
@@ -381,7 +381,7 @@ function startVernieLED() {
     document.getElementById("vernieOutput").innerHTML += "Publisher initializing.\n";
 
     if (vernieLED === null) {
-        vernieLED = new Worker("./thesis_src/rosWorkers/rainbow.js");
+        vernieLED = new Worker("./demo_src/rosWorkers/rainbow.js");
     }
 
     vernieLED.onmessage = onMessageFromWorker;

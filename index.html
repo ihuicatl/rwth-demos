@@ -4,32 +4,31 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <link rel="icon" type="image/x-icon" href="./thesis_src/images/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="./demo_src/images/favicon.svg">
 
-    <title>ROS2WASM</title>
+    <title>QuantStack Robotics</title>
 
-    <link href='https://fonts.googleapis.com/css?family=Bayon' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Konkhmer Sleokchher' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Fira+Sans' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Days+One' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Mono' rel='stylesheet'>
 
     <link rel="stylesheet" href="../dist/reset.css">
     <link rel="stylesheet" href="../dist/reveal.css">
     <link rel="stylesheet" href="../dist/theme/igmr.css">
 
-    <!-- 15 MINUTES -->
     <!-- Theme used for syntax highlighted code -->
     <link rel="stylesheet" href="../plugin/highlight/monokai.css">
 </head>
 <body>
-    <script src="./thesis_src/rosWorkers/rosMain.js"></script>
-    <script src="./thesis_src/dist/bundle.js"></script>
+    <script src="./demo_src/rosWorkers/rosMain.js"></script>
+    <script src="./demo_src/dist/bundle.js"></script>
 
     <div class="reveal">
     <div class="slides">
 
-        <section data-background="./thesis_src/images/terminator.jpg">
-            <h1 id="demoTitle">DEMOS</h1>
+        <section data-background="./demo_src/images/robotBattle_tinted.jpg">
+            <p id="demoTitle">DEMOS</p>
         </section>
 
         <section>
@@ -116,7 +115,7 @@
                     <div id="vernieConnect">
                         <button onclick="connect(); happyVernie();">CONNECT</button>
                         <img id="vernie-head"
-                            src="./thesis_src/images/vernie_angry.svg"
+                            src="./demo_src/images/vernie_angry.svg"
                             alt="Vernie's head">
                         <button onclick="disconnect(); angryVernie();">DISCONNECT</button>
                     </div>
@@ -124,12 +123,13 @@
                     <h3>Publish LED colors</h3>
                     <div class="demoBox">
                     <div class="buttonBox" id="vernieButtons">
-                        <svg width = "1em" height="1em">
-                            <circle id="ledCircle" cx="0.5em" cy="0.5em" r="0.5em" fill="black"/>
+                        <svg width = "1.1em" height="1.1em">
+                            <circle cx="0.55em" cy="0.55em" r="0.55em" fill="black"/>
+                            <circle id="ledCircle" cx="0.55em" cy="0.5em" r="0.5em" fill="black"/>
                         </svg>
-                        <button onclick="startVernieLED()">START</button>
-                        <button onclick="stopVernieLED()">STOP</button>
-                        <button onclick="clearVernieLED()">CLEAR</button>
+                        <button class="startBtn" onclick="startVernieLED()">START</button>
+                        <button class="stopBtn" onclick="stopVernieLED()">STOP</button>
+                        <button class="clearBtn" onclick="clearVernieLED()">CLEAR</button>
                     </div>
                     <textarea id="vernieOutput"  rows="8"></textarea>
                     </div>
@@ -191,44 +191,9 @@
             </div>
         </section>
 
-        <section>
-            <h2>Questions<code>?</code></h2>
-            <div class="slideContent">
-            <div class="two-col">
-                <div class="text-col" id="questionText">
-                    <p><b>Special Thanks to</b></p>
-                    <ul>
-                        <li>M.Sc. Wolf Vollprecht</li>
-                        <li>M.Sc. Markus Schmitz</li>
-                    </ul>
-                    <p><b>Resources</b></p>
-                        <ul>
-                            <li><a href="https://ros2wasm.dev/">ros2wasm.dev</a></li>
-                            <li><a href="https://github.com/ihuicatl/rmw_wasm/">github.com/ihuicatl/rmw_wasm</a></li>
-                            <li><a href="https://github.com/ihuicatl/ros2wasm">github.com/ihuicatl/ros2wasm</a></li>
-                        </ul>
-                    <p><b>Slides</b></p>
-                    <ul>
-                        <li><a href="https://ihuicatl.github.io/reveal.js/presentations/thesis.html">ihuicatl.github.io/reveal.js/presentations/thesis.html</a></li>
-                    </ul>
-                    <img src="./thesis_src/images/qr_slides.png" id="qr-code">
-                    <p><b>Credits</b></p>
-                    <ul>
-                        <li>Illustrations by <a href="https://storyset.com/people">Storyset</a></li>
-                    </ul>
-                    <p><b>Contact</b></p>
-                    <ul>
-                        <li><a href="mailto:isabel.paredes@quantstack.net">isabel.paredes@quantstack.net</a></li>
-                    </ul>
-
-                </div>
-                <div class="img-col">
-                    <object id="robotArm" type="image/svg+xml" data="./thesis_src/images/robot-arm-animated.svg"></object>
-                </div>
-            </div>
-            </div>
+        <section data-background="./demo_src/images/robotBattle.jpg">
+            <h1 id="demoTitle">The End</h1>
         </section>
-
 
 
     </div>
@@ -272,7 +237,7 @@
     </div>
 
     <div class="footer-logos">
-        <img src="./thesis_src/images/quantstack_logo.svg" alt="QuantStack and IGMR logos">
+        <img src="./demo_src/images/quantstack_logo.svg" alt="QuantStack and IGMR logos">
     </div>
 
 </div>
